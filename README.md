@@ -1,5 +1,7 @@
 # mini-crm-repair-requests
 
+sudo pkill -f postgres
+
 # Start
 docker compose up -d db
 

@@ -2,4 +2,5 @@ alembic/.env
 __pycache__/
 TEST_INSTRUCTIONS.md
 test_database.py
+test_auth.py
 .env
