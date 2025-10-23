@@ -1,5 +1,5 @@
-alembic/.env
 __pycache__/
+versions/
 TEST_INSTRUCTIONS.md
 test_database.py
 test_auth.py
