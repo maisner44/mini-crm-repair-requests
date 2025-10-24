@@ -17,9 +17,7 @@ services:
       retries: 5
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: maisner44/mini-crm-repair-requests:latest
     container_name: mini_crm_app
     depends_on:
       db:
