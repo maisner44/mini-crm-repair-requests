@@ -11,8 +11,13 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copy application code
+COPY app app/
+COPY scripts scripts/
 
-EXPOSE 8000
+# Copy Alembic files (IMPORTANT!)
+COPY alembic alembic/
+COPY alembic.ini .
 
-CMD alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000
+# Run migrations and start application
+CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]

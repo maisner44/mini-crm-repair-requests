@@ -5,3 +5,4 @@ test_database.py
 test_auth.py
 test_api.py
 .env
+.coverage
